@@ -29,7 +29,7 @@ public class PracticeForm {
         $("#lastName").setValue("Mihailov");
         $("#userEmail").setValue("jekkka23@mail.ru");
         $(byText("Female")).click();
-        $("#userNumber").setValue("+79220376889");
+        $("#userNumber").setValue("1111111111");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption("1995");
         $(".react-datepicker__month-select").selectOption("February");

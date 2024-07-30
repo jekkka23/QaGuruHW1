@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -46,6 +48,11 @@ public class PracticeForm {
         $("#city").click();
         $(byText("Delhi")).click();
         $("#submit").click();
+
+        //проверки
+        $(".modal-dialog").should(appear);
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-responsive").shouldHave(text("Evgeny"), text("Mihailov"), text("jekkka23@mail.ru"), text("1111111111"));
 
     }
 
